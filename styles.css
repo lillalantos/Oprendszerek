@@ -1,0 +1,636 @@
+html, body{
+  box-sizing:border-box;
+  background: linear-gradient(#1B1948, #413558);
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
+  background-repeat: no-repeat; /* Letiltja a csíkozódást */
+  min-height: 100vh;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.glass-box {
+  position: absolute;
+  border-radius: 32px; 
+  background: linear-gradient(45deg, #4F4A9F1a, #0402461A);
+  backdrop-filter: blur(50px); 
+  -webkit-backdrop-filter: blur(110px); /* Safari támogatás */
+  border: 0.5px solid #D0C6C64A; 
+  box-shadow: inset 0 2px 10px 0 rgba(33, 2, 90, 0.241);
+
+}
+
+/* Kockák egyedi méretezése és pozicionálása */
+.box-1 {
+  width: 20vw;
+  height: 30vh;
+  top: -10%;
+  right: -5%;
+  z-index:1;
+}
+
+.box-2 {
+  width: 25vw;
+  height: 33vh;
+  top: 25%;
+  right: 20%
+}
+
+.box-3 {
+  width: 25vw;
+  height: 18vh;
+  bottom: 32%;
+  right: 10%;
+}
+
+.box-4 {
+  width: 18vw;;
+  height: 25vh;
+  top: 7%;
+  right: 10%;
+}
+
+.box-5{
+  width:10vw;
+  height:12vh;
+  top:25%;
+  right:5%;
+  border-radius:30%;
+}
+
+.box-6{
+  width:5vw;
+  height:7vh;
+  bottom:35%;
+  right:44%;
+  border-radius:25%;
+}
+
+.box-7{
+  width: 15vw;
+  height: 20vh;
+  bottom: 10%;
+  right: 35%;
+}
+
+.box-8{
+  width:10vw;
+  height:7vh;
+  bottom:20%;
+  right:20%;
+  border-radius:25%;
+}
+
+.box-9{
+  width:8vw;
+  height:10vh;
+  bottom:4%;
+  right:52%;
+  border-radius:25%;
+  
+}
+
+header img{
+  position:absolute;
+  left:3%;
+  top:5%;
+  width:10%;
+}
+
+.content{
+  margin-top:5%;
+  margin-left:5%;
+  z-index:1000;
+  color:#DBD9D5;
+  left:50px;
+  width:90%;
+}
+
+h1{
+  font-family: "Istok Web", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: clamp(2rem, 5vw, 6rem);
+  letter-spacing:-1px;
+  line-height:0.9;
+}
+
+.content p{
+  font-size: clamp(2px, 1rem, 2rem);
+  font-style:italic;
+  
+}
+
+.call-to-actions{
+  display:flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left:30%;
+  margin-top:5%;
+  margin-bottom:10%;
+  width:60%;
+}
+
+button{
+  padding:0.8rem;
+  border-radius:50px;
+  font-size:clamp(0.2rem, 1em, 1.3em);
+  border:none;
+  margin-right:15px;
+}
+
+#services, #price-calculator{
+  background:linear-gradient(90deg, #4F4A9F 60%, #235EB7);
+  color:#DBD9D5;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+#contact{
+  background:linear-gradient(90deg, #445061CC , #706d94cc,  #9794B5CC);
+  color:#DBD9D5;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+.About-us{
+  width:100%;
+  box-sizing:border-box;
+  background-color: #DBD9D5;
+  padding-top:3%;
+  text-align:center;
+}
+
+.About-us h2{
+  font-family: "Istok Web", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: clamp(2rem, 4vw, 6rem);
+  background: linear-gradient(90deg, #1B1948, #413558);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  color: transparent;
+  
+}
+
+.About-us p{
+  font-size:1.2em;
+  padding-left:15%;
+  padding-right:15%;
+  padding-bottom:10px;
+}
+.About-us p:last-of-type{
+  padding-bottom:150px;
+}
+
+.map-section{
+  display:flex;
+  justify-content: space-between; 
+  align-items: center;
+  
+  height:100%;
+  min-height: 60vh;
+  padding-bottom:30%;
+}
+
+.map-explanation{
+  width:25%;
+  margin-left:5%;
+  background:linear-gradient(-45deg, rgba(182, 174, 189, 0.4), rgba(234, 233, 231, 0.5), rgba(250, 249, 248, 0.4));
+  border-radius:50px;
+  padding-top:50px;
+  padding-bottom:50px;
+  font-family: "Istok Web", sans-serif;
+}
+
+.map-explanation h2{
+  text-align: center;
+  padding-bottom:5%;
+  font-size: 2rem;
+  color:#181455;
+}
+
+.map-explanation ul{
+  text-align: right;
+  padding-right:20%;
+  list-style: none;
+  line-height:2.5;
+  font-style:oblique
+}
+
+.map-section img{
+  width:55%;
+  height: auto;
+  margin-right:5%;
+  margin-top:5%;
+}
+
+
+.title{
+  text-align: center;
+  padding-top:7%;
+  color:#DBD9D5;
+}
+
+.services{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:15%;
+  padding-left:10%;
+  padding-right:10%;
+  width:100%;
+  height:45vh;
+  margin-top:7%;
+  margin-bottom:10%;
+}
+
+.service{
+  position:relative;
+  background-color: #DBD9D54D;
+  height:100%;
+  border-radius:50px;
+  transition: opacity 0.4s ease;
+}
+
+.services:has(.software:hover) .support,
+.services:has(.software:hover) .digital {
+  opacity: 0;
+}
+
+.services:has(.support:hover) .software,
+.services:has(.support:hover) .digital {
+  opacity: 0; 
+}
+
+.services:has(.digital:hover) .support,
+.services:has(.digital:hover) .software {
+  opacity: 0; 
+}
+
+.software-info{
+  width:120%;
+  height:15%;
+  background-color: #DBD9D51A;
+  border-radius:10px 50px 50px 10px;
+  position:absolute;
+  transition: opacity 0.4s ease;
+  opacity:0;
+}
+
+.support-info{
+  width:120%;
+  height:15%;
+  background-color: #DBD9D51A;
+  border-radius:50px 10px 10px 50px;
+  position:absolute;
+  transition: opacity 0.4s ease;
+  opacity:0;
+}
+
+.digital-info{
+  width:120%;
+  height:15%;
+  background-color: #DBD9D51A;
+  border-radius:50px 10px 10px 50px;
+  position:absolute;
+  transition: opacity 0.4s ease;
+  opacity:0;
+}
+
+.one{
+  left:120%;
+  top:10%;
+  pointer-events: none;
+}
+
+.two{
+  left:130%;
+  top:35%;
+  pointer-events: none;
+}
+
+.three{
+  left:140%;
+  top:60%;
+  pointer-events: none;
+}
+
+.four{
+  right:120%;
+  top:10%;
+  pointer-events: none;
+}
+
+.five{
+  left:120%;
+  top:35%;
+  border-radius:10px 50px 50px 10px;
+  pointer-events: none;
+}
+
+.six{
+  right:120%;
+  top:60%;
+  pointer-events: none;
+}
+
+.seven{
+  right:120%;
+  top:10%;
+  pointer-events: none;
+}
+
+.eight{
+  right:130%;
+  top:35%;
+  pointer-events: none;
+}
+
+.nine{
+  right:140%;
+  top:60%;
+  pointer-events: none;
+}
+
+
+.services:has(.software:hover) .software-info{
+  opacity:1;
+}
+
+.services:has(.support:hover) .support-info{
+  opacity:1;
+}
+
+.services:has(.digital:hover) .digital-info{
+  opacity:1;
+}
+
+#software-content, #digital-content{
+  width:100%;
+  padding:8% 5% 8% 2%;
+  border-radius:50px;
+  margin-top:10%;
+  box-shadow: 10px 30px 40px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom:10%;
+}
+
+#support-content{
+  width:100%;
+  margin-right:5%;
+  margin-bottom:10%;
+  text-align: right;
+  padding:5% 5% 5% 2%;
+  border-radius:50px;
+  box-shadow: 10px 30px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content .content-title{
+  font-family: "Istok Web", sans-serif;
+  font-weight: bold;
+  text-decoration: underline 0.1px solid white;
+  font-size: clamp(1rem, 2rem, 5rem);
+  padding-bottom:3%;
+  padding-left:5%;
+  padding-right:5%;
+}
+
+.content-p{
+  padding:0 3%
+}
+
+main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; 
+}
+
+html:has(body.Contact) {
+  background: transparent;
+}
+
+.Contact {
+  background:linear-gradient(#e1e0e0cf, #d2cec5);
+  background-attachment: fixed;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: block; 
+  padding-top: 1px;
+}
+
+.contact-title {
+  width: 100%;
+  text-align: center;
+  padding-top: 120px; 
+  position: relative;
+  z-index: 10;
+}
+
+.contact-title h1{
+  font-family: "Istok Web", sans-serif;
+  font-style: italic;  font-size: clamp(3rem, 8vw, 5rem);
+  background: linear-gradient(90deg, #584e72, #1B1948);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.title{
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+.form-box{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  gap: 40px;
+  background: rgba(16, 1, 75, 0.084); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  width: 80%; 
+  margin: 5% auto; 
+  height: auto;
+  box-sizing: border-box;
+  position: relative; 
+  z-index: 10; 
+}
+
+.first h2{
+  font-family: "Istok Web", sans-serif;
+  font-weight: bold;
+  font-size: clamp(1rem, 2rem, 4rem);
+  color:#1B1948;
+  margin-left:10%;
+  margin-top:25%;
+}
+
+.first .contact-info{
+  color:#1B1948;
+  margin-left:20%;
+  margin-top:15%;
+  font-style: italic;
+  font-size: clamp(0.7rem, 1rem, 1.5rem);
+}
+
+.form-box .first {
+  flex: 1;
+  min-width: 250px;
+}
+
+.form-box .second {
+  flex: 2;
+  min-width: 300px;
+  margin-left:10%;
+}
+
+.infos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.infos label{
+  display: block;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+
+.infos input{
+  margin-left:10%;
+  border: none;
+  border-bottom: 1.5px solid gray;
+  background-color: transparent;
+}
+
+.question-type .topic{
+  display: block;
+  margin-top: 8%;
+  margin-bottom: 5%;
+}
+
+.question-type input{
+  margin: 0 3%;
+}
+
+.question-type{
+  margin-bottom:8%;
+}
+
+#question-area{
+  margin-top: 5%;
+  margin-bottom:5%;
+  border-radius: 10px;
+  background-color: #fcf8fe1a;
+  opacity: 0.8;
+}
+
+.end{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.end button{
+  margin-left:5%;
+  margin-top:15%;
+  height: 5%;
+  color:rgb(35, 34, 34);
+  font-size: 0.9rem;
+  font-style: italic;
+  padding:10px 20px;
+  transition: transform 0.5s ease;
+}
+
+button:hover{
+  transform: scale(1.05);
+  background-color: rgb(236, 236, 235);
+}
+
+
+.calculator-title{
+  font-family: "Istok Web", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: clamp(2rem, 5vw, 6rem);
+  letter-spacing:-1px;
+  line-height:0.9;
+  margin-top: 10%;
+  margin-left:15%;
+  margin-bottom: 1%;
+}
+
+.calculator-box{
+  width: 95%;
+  margin:auto;
+  padding:5%;
+  background: transparent;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:5%;
+  font-size: clamp(0.5rem, 1.5vw, 2rem);
+  color:#DBD9D5;
+}
+
+.choose-service, .speed, .extras{
+  padding:5% 10%;
+  border-radius:50px;
+  margin-bottom:10%;
+  box-shadow: 10px 30px 40px 10px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-box .titles{
+  display: block;
+  margin-bottom:8%;
+  margin-top: 0;
+}
+
+.calculator-box input, select{
+  margin-left: 5%;
+}
+
+.calculator-box select{
+  height:30%;
+  width: 50%;
+  margin-left:40%;
+  margin-bottom:5%;
+  border-radius: 50px;
+  padding-left:2%;
+  font-style: italic;
+  background-color: rgb(191, 188, 188);
+}
+
+.calculator-box label{
+  font-size: clamp(0.5rem, 1.3vw, 2rem);
+}
+
+.result{
+  margin-left:10%;
+  font-size:clamp(1rem, 2vw, 2rem);
+  font-style: italic;
+}
+
+
+hr{
+  width: 55%;
+  margin-right: 100%;
+  margin-bottom: 5%;
+}

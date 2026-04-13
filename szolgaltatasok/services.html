@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Properties</title>
+
+    <link rel="stylesheet" href="../styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <img src="../fooldal/novatech_logo.png" alt="novatech logo" data-aos="fade-down">
+    </header>
+
+    <main>
+            <div class="title">
+                <h1 data-aos="flip-up">Szolgáltatásaink</h1>
+            </div>
+
+            <section class="services">
+                <a href="#software-content"><div data-aos="fade-right" class="service software">
+                    <h2 class="service-titles">Egyedi <br>Szoftverfejlesztés</h2>
+                    <div class="software-info one info">Személyre szabott megoldások</div>
+                    <div class="software-info two info">Modern technológiák</div>
+                    <div class="software-info three info">Teljes életciklus támogatás</div>
+                </div></a>
+                <a href="#support-content"><div data-aos="fade-up" class="service support">
+                    <h2 class="service-titles">Vállalati <br> Folyamatok Digitalizálása</h2>
+                    <div class="support-info four info">Hatékonyságnövelés</div>
+                    <div class="support-info five info">Egységes rendszerek bevezetése</div>
+                    <div class="support-info six info">Biztonságos adatkezelés</div>
+                </div></a>
+                <a href="#digital-content"><div data-aos="fade-left" class="service digital">
+                    <h2 class="service-titles">IT Tanácsadás <br> és <br> Rendszerintegráció</h2>
+                    <div class="digital-info seven info">Üzleti igények felmérése</div>
+                    <div class="digital-info eight info">Technológiai stratégia</div>
+                    <div class="digital-info nine info">Projekttámogatás</div>
+                </div></a>
+            </section>
+
+
+            <section class="content">
+
+                <div id="software-content" data-aos="fade-left">
+                    <h2 class="content-title">Egyedi szoftverfejlesztés</h2>
+                    <p class="content-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate vehicula consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla in mauris vitae nisl pharetra dictum. Pellentesque maximus id ante in convallis.</p>
+                    <p class="content-p">Fusce cursus nunc et metus fermentum suscipit. Etiam vestibulum consequat sollicitudin. Integer id finibus odio. Quisque sit amet congue urna, vel pharetra tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris posuere elit nec ante tempor aliquet. Curabitur ut egestas lorem. Proin nibh odio, porttitor ac magna et, sodales iaculis diam.</p>
+                </div>
+
+                <div id="support-content" data-aos="fade-right">
+                    <h2 class="content-title">IT-tanácsadás</h2>
+                    <p class="content-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate vehicula consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla in mauris vitae nisl pharetra dictum. Pellentesque maximus id ante in convallis.</p>
+                    <p class="content-p">Fusce cursus nunc et metus fermentum suscipit. Etiam vestibulum consequat sollicitudin. Integer id finibus odio. Quisque sit amet congue urna, vel pharetra tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris posuere elit nec ante tempor aliquet. Curabitur ut egestas lorem. Proin nibh odio, porttitor ac magna et, sodales iaculis diam.</p>
+                    
+                </div>
+
+                <div id="digital-content" data-aos="fade-left">
+                    <h2 class="content-title">Folyamat automatizálás</h2>
+                    <p class="content-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate vehicula consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla in mauris vitae nisl pharetra dictum. Pellentesque maximus id ante in convallis.</p>
+                    <p class="content-p">Fusce cursus nunc et metus fermentum suscipit. Etiam vestibulum consequat sollicitudin. Integer id finibus odio. Quisque sit amet congue urna, vel pharetra tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris posuere elit nec ante tempor aliquet. Curabitur ut egestas lorem. Proin nibh odio, porttitor ac magna et, sodales iaculis diam.</p>
+                </div>
+
+            </section>
+
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init({
+    duration: 800, /* Az animáció hossza milliszekundumban (0.8 másodperc) */
+    once: true,    /* Csak egyszer játssza le, amikor lefelé görgetsz */
+    offset: 100    /* Mennyivel az elem teteje előtt induljon az animáció */
+  });
+    </script>
+
+</body>
+
+</html>
