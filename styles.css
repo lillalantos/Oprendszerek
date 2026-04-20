@@ -279,6 +279,26 @@ button{
   opacity: 0; 
 }
 
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#DBD9D5;
+  font-style: italic;
+}
+
+.service-titles{
+  text-align: center;
+  color:#DBD9D5;
+  padding-top:30%;
+  font-size: clamp(1rem, 2vw, 4rem);
+}
+
+.services a{
+  text-decoration: none;
+  line-height: 1.5;
+}
+
 .software-info{
   width:120%;
   height:15%;
