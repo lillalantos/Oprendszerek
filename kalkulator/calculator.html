@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Properties</title>
+
+    <link rel="stylesheet" href="../styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <img src="./novatech_logo.png" alt="novatech logo">
+    </header>
+
+    <section class="hero-section">
+            <div class="content">
+                <h1 class="calculator-title">Árkalkulátor</h1>
+                <hr/>
+            </div>
+
+            <div class="glass-box box-1"></div>
+            <div class="glass-box box-2"></div>
+            <div class="glass-box box-4"></div>
+            <div class="glass-box box-5"></div>
+            <div class="glass-box box-6"></div>
+            <div class="glass-box box-7"></div>
+            <div class="glass-box box-9"></div>
+            
+        </section>
+
+    <div class="calculator-box">
+
+        <div class="choose-service">
+            <label for="service" class="titles">Válassz szolgáltatást:</label>
+            <select id="service">
+                <option value="0">Kérlek, válassz...</option>
+                <option value="50000">Alap weboldal</option>
+                <option value="120000">Prémium weboldal</option>
+                <option value="250000">Webáruház</option>
+            </select>
+        </div>
+
+        <div class="speed">
+            <p class="titles">Milyen gyorsan van rá szükség?</p>
+            <label>
+                <input type="radio" name="speed" value="0" checked> Normál tempó (3-5 hónap)
+            </label>
+            <label>
+                <input type="radio" name="speed" value="30000"> Sürgős (2-4 hónap)
+            </label>
+        </div>
+
+        <div class="extras">
+            <p class="titles">Extrák:</p>
+            <label>
+                <input type="checkbox" id="seo" value="20000"> Keresőoptimalizálás (SEO)
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" id="maintenance" value="15000"> 1 év karbantartás
+            </label>
+        </div>
+
+        <div class="result">
+            <h3>Becsült végösszeg: <span id="total-price">0</span> Ft</h3>
+        </div>
+</div>
+
+<script>
+  // 1. Megkeressük a HTML elemeket
+  const serviceSelect = document.getElementById('service');
+  const speedRadios = document.querySelectorAll('input[name="speed"]');
+  const seoCheckbox = document.getElementById('seo');
+  const maintenanceCheckbox = document.getElementById('maintenance');
+  const priceDisplay = document.getElementById('total-price');
+
+  
+  function calculateTotal() {
+    let total = 0;
+
+    
+    total += parseInt(serviceSelect.value);
+
+    
+    const selectedSpeed = document.querySelector('input[name="speed"]:checked');
+    if (selectedSpeed) {
+      total += parseInt(selectedSpeed.value);
+    }
+
+    
+    if (seoCheckbox.checked) {
+      total += parseInt(seoCheckbox.value);
+    }
+    if (maintenanceCheckbox.checked) {
+      total += parseInt(maintenanceCheckbox.value);
+    }
+
+   
+    priceDisplay.innerText = total.toLocaleString('hu-HU');
+  }
+
+  serviceSelect.addEventListener('change', calculateTotal);
+  seoCheckbox.addEventListener('change', calculateTotal);
+  maintenanceCheckbox.addEventListener('change', calculateTotal);
+  
+ 
+  speedRadios.forEach(radio => {
+    radio.addEventListener('change', calculateTotal);
+  });
+</script>
+</body>
+
+</html>
