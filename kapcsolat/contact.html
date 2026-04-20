@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Properties</title>
+
+    <link rel="stylesheet" href="../styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="Contact">
+
+  <header>
+    <img src="./image.png" alt="novatech logo">
+  </header>
+
+  <main>
+    
+    
+
+
+    <div class="glass-box box-1" data-aos="fade-left"></div>
+    <div class="glass-box box-2" data-aos="fade-right"></div>
+    <div class="glass-box box-3" data-aos="fade-up"></div>
+    <div class="glass-box box-4" data-aos="fade-down"></div>
+    <div class="glass-box box-5" data-aos="fade-eft"></div>
+    <div class="glass-box box-6" data-aos="fade-right"></div>
+    <div class="glass-box box-7" data-aos="fade-up"></div>
+    <div class="glass-box box-8" data-aos="fade-down"></div>
+    <div class="glass-box box-9" data-aos="fade-right"></div>
+    
+    <section class="contact-title">
+      <h1>Kapcsolat</h1>
+    </section>
+           
+    <div class="form-box">
+      
+      
+      <div class="first">
+        <h2>Elérhetőség:</h2>
+        <div class="contact-info">
+          <p>✉️  example@gmail.com</p>
+          <p>📍Example street 1 1000 Budapest</p>
+        </div>
+      </div>
+
+
+      <div class="second">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="cee5aff7-1f91-44e7-ba80-2a440791ef04">
+          <div class="infos">
+            <div class="infos1">
+              <label for="vezeteknev">Vezetéknév: </label>
+              <input required id="vezeteknev" type="text" name="vezeteknev">
+              <label for="email">Email: </label>
+              <input required id="email" type="email" name="email">
+            </div>
+            
+            <div class="infos2">
+              <label for="keresztnev">Keresztnév: </label>
+              <input required id="keresztnev" type="text" name="keresztnev">
+              <label for="telefon">Telefonszám: </label>
+              <input id="telefon" type="phone" name="telefon">
+            </div>
+
+          </div>
+          
+          <div class="question-type">
+            <label for="choice1 choice2 choice3" class="topic">Kérdés témája</label>
+            <input type="radio" id="choice1" name="choice"><label for="choice1 choice">Szoftverfejlesztés</label>
+            <input type="radio" id="choice2" name="choice"><label for="choice2 choice">IT tanácsadás</label>
+            <input type="radio" id="choice3" name="choice"><label for="choice3 choice">Automatizálás</label>
+          </div>
+
+          
+          <div class="end">
+            <label for="question-area" class="question">Kérdés: </label>
+            <textarea id="question-area" name="question-area" type="text" rows="6" cols="45"></textarea>
+            <button type="submit">Küldés</button>
+          </div>
+        </form>
+      </div>
+
+      
+
+    </div>
+
+    
+
+  </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init({
+    duration: 800, /* Az animáció hossza milliszekundumban (0.8 másodperc) */
+    once: true,    /* Csak egyszer játssza le, amikor lefelé görgetsz */
+    offset: 100    /* Mennyivel az elem teteje előtt induljon az animáció */
+  });
+    </script>
+
+    
+</body>
+
+</html>
